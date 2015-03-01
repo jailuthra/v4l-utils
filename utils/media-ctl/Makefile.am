@@ -17,8 +17,8 @@ CLEANFILES = $(BUILT_SOURCES)
 nodist_libv4l2subdev_la_SOURCES = $(BUILT_SOURCES)
 libv4l2subdev_la_SOURCES = libv4l2subdev.c
 libv4l2subdev_la_LIBADD = libmediactl.la
-mediactl_includedir=$(includedir)/mediactl
-noinst_HEADERS = mediactl.h v4l2subdev.h
+otherincludedir = $(includedir)/mediactl
+otherinclude_HEADERS = mediactl.h v4l2subdev.h
 
 pkgconfig_DATA = libmediactl.pc
 bin_PROGRAMS = media-ctl
