@@ -34,7 +34,7 @@
 
 #define MEDIA_BUS_FMT_FIXED			0x0001
 
-/* RGB - next is	0x101e */
+/* RGB - next is	0x101d */
 #define MEDIA_BUS_FMT_RGB444_1X12		0x1016
 #define MEDIA_BUS_FMT_RGB444_2X8_PADHI_BE	0x1001
 #define MEDIA_BUS_FMT_RGB444_2X8_PADHI_LE	0x1002
@@ -56,7 +56,6 @@
 #define MEDIA_BUS_FMT_RGB888_2X12_BE		0x100b
 #define MEDIA_BUS_FMT_RGB888_2X12_LE		0x100c
 #define MEDIA_BUS_FMT_RGB888_3X8		0x101c
-#define MEDIA_BUS_FMT_RGB888_3X8_DELTA		0x101d
 #define MEDIA_BUS_FMT_RGB888_1X7X4_SPWG		0x1011
 #define MEDIA_BUS_FMT_RGB888_1X7X4_JEIDA	0x1012
 #define MEDIA_BUS_FMT_ARGB8888_1X32		0x100d
@@ -112,7 +111,7 @@
 #define MEDIA_BUS_FMT_YUV16_1X48		0x202a
 #define MEDIA_BUS_FMT_UYYVYY16_0_5X48		0x202b
 
-/* Bayer - next is	0x3021 */
+/* Bayer - next is	0x3029 */
 #define MEDIA_BUS_FMT_SBGGR8_1X8		0x3001
 #define MEDIA_BUS_FMT_SGBRG8_1X8		0x3013
 #define MEDIA_BUS_FMT_SGRBG8_1X8		0x3002
@@ -145,6 +144,14 @@
 #define MEDIA_BUS_FMT_SGBRG16_1X16		0x301e
 #define MEDIA_BUS_FMT_SGRBG16_1X16		0x301f
 #define MEDIA_BUS_FMT_SRGGB16_1X16		0x3020
+#define MEDIA_BUS_FMT_SRGGI10_1x10		0x3021
+#define MEDIA_BUS_FMT_SGRIG10_1x10		0x3022
+#define MEDIA_BUS_FMT_SBGGI10_1x10		0x3023
+#define MEDIA_BUS_FMT_SGBIG10_1x10		0x3024
+#define MEDIA_BUS_FMT_SGIRG10_1x10		0x3025
+#define MEDIA_BUS_FMT_SIGGR10_1x10		0x3026
+#define MEDIA_BUS_FMT_SGIBG10_1x10		0x3027
+#define MEDIA_BUS_FMT_SIGGB10_1x10		0x3028
 
 /* JPEG compressed formats - next is	0x4002 */
 #define MEDIA_BUS_FMT_JPEG_1X8			0x4001
@@ -156,13 +163,5 @@
 
 /* HSV - next is	0x6002 */
 #define MEDIA_BUS_FMT_AHSV8888_1X32		0x6001
-
-/*
- * This format should be used when the same driver handles
- * both sides of the link and the bus format is a fixed
- * metadata format that is not configurable from userspace.
- * Width and height will be set to 0 for this format.
- */
-#define MEDIA_BUS_FMT_METADATA_FIXED		0x7001
 
 #endif /* __LINUX_MEDIA_BUS_FORMAT_H */

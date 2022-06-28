@@ -203,7 +203,7 @@ struct v4l2_subdev_capability {
 #define V4L2_SUBDEV_CAP_RO_SUBDEV		0x00000001
 
 /* The v4l2 sub-device supports multiplexed streams. */
-#define V4L2_SUBDEV_CAP_MPLEXED			0x00000002
+#define V4L2_SUBDEV_CAP_MPLEXED         0x00000002
 
 /*
  * Is the route active? An active route will start when streaming is enabled
@@ -249,15 +249,15 @@ struct v4l2_subdev_route {
  * struct v4l2_subdev_routing - Subdev routing information
  *
  * @which: configuration type (from enum v4l2_subdev_format_whence)
- * @num_routes: the total number of routes in the routes array
  * @routes: pointer to the routes array
+ * @num_routes: the total number of routes in the routes array
  * @reserved: drivers and applications must zero this array
  */
 struct v4l2_subdev_routing {
 	__u32 which;
-	__u32 num_routes;
 	__u64 routes;
-	__u32 reserved[6];
+	__u32 num_routes;
+	__u32 reserved[5];
 };
 
 /* Backwards compatibility define --- to be removed */
